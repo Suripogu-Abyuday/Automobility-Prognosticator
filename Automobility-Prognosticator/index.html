@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodieExpress - Food Delivery Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf2;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .search-container input {
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: none;
+      width: 250px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ffe0e0, #fff3e0);
+    }
+
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff4d4d;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px 0;
+      font-size: 1.8em;
+      color: #ff4d4d;
+    }
+
+    .Categories .Categeries-gid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .Categories .Categeries-gid div {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .Categories .Categeries-gid div:hover {
+      transform: translateY(-5px);
+    }
+
+    .category.Icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    /* Restaurants */
+    .restaurants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .restaurant-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .restaurant-image {
+      font-size: 2em;
+    }
+
+    /* Menu */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .menu-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Offers */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px 50px 20px;
+    }
+
+    .offer-card {
+      background: #fff0f0;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #ffd6d6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ff4d4d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🍔 FoodieExpress</div>
+    <div class="location">
+      Deliver to: <strong>Bengaluru, 560076</strong>
+    </div>
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search for restaurant, cuisines, or dishes..."
+      /> 🛒
+    </div>
+    <div class="user-action">
+      <a href="#cart" class="cart-icon">
+        🛍️ <span class="cart-count">(3)</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>Delicious Food, Delivered Fast 🍽️</h1>
+      <p>
+        Craving something tasty? FoodieExpress brings your favorite meals from
+        top restaurants right to your door. Browse menus, customize your order,
+        and enjoy fast, contactless delivery!
+      </p>
+      <a href="#restaurants" class="cta-button">Order Now</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="Categories">
+    <div class="container">
+      <h2 class="section-title">Popular Categories</h2>
+      <div class="Categeries-gid">
+        <div>
+          <div class="category Icon">🍕</div>
+          <h3>Pizza</h3>
+          <p>Cheesy, crispy, and freshly baked!</p>
+        </div>
+        <div>
+          <div class="category Icon">🍩</div>
+          <h3>Desserts</h3>
+          <p>Sweet treats to make your day better.</p>
+        </div>
+        <div>
+          <div class="category Icon">🍗</div>
+          <h3>Spicy</h3>
+          <p>Turn up the heat with our spicy picks!</p>
+        </div>
+        <div>
+          <div class="category Icon">🍨</div>
+          <h3>Combos</h3>
+          <p>Perfect combos for every mood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESTAURANTS -->
+  <section id="restaurants" class="restaurants">
+    <div class="container">
+      <h2 class="section-title">Top Restaurants Near You</h2>
+      <div class="restaurants-grid">
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍕</div>
+          <h3>Pizza Palace</h3>
+          <p>Fast Delivery • Italian Cuisine</p>
+        </div>
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍣</div>
+          <h3>Sushi World</h3>
+          <p>Fresh Sushi • Japanese</p>
+        </div>
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍔</div>
+          <h3>Burger Hub</h3>
+          <p>Juicy Burgers • American</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu">
+    <div class="container">
+      <h2 class="section-title">Popular Dishes</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          🍝 <h3>Spaghetti</h3>
+          <p>Classic Italian pasta with rich tomato sauce.</p>
+        </div>
+        <div class="menu-item">
+          🍛 <h3>Butter Chicken</h3>
+          <p>Creamy, spicy, and flavorful Indian favorite.</p>
+        </div>
+        <div class="menu-item">
+          🥗 <h3>Caesar Salad</h3>
+          <p>Fresh greens with creamy dressing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers">
+    <div class="container">
+      <h2 class="section-title">Special Offers</h2>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <h3>🍔 50% Off Burgers</h3>
+          <p>Order now and enjoy half-price on all burgers!</p>
+        </div>
+        <div class="offer-card">
+          <h3>🍕 Buy 1 Get 1 Pizza</h3>
+          <p>Every Wednesday, enjoy double the fun!</p>
+        </div>
+        <div class="offer-card">
+          <h3>🍨 Free Dessert</h3>
+          <p>Get a free dessert on orders above ₹499.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 FoodieExpress | Made with ❤️ for food lovers.</p>
+  </footer>
+</body>
+</html>
